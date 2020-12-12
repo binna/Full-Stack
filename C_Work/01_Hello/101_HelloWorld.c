@@ -1,0 +1,8 @@
+#include <stdio.h>
+
+int main()
+{
+	printf("Hello World\n");
+	printf("æ»≥Á«œººø‰\n");
+	getchar();
+}
