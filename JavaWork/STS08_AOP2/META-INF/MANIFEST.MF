@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: STS08_AOP2
+Bundle-SymbolicName: STS08_AOP2
+Bundle-Version: 1.0.0.qualifier
+Export-Package: com.lec.beans,
+ com.lec.spring.aop01,
+ com.lec.spring.aop02,
+ com.lec.spring.aop03

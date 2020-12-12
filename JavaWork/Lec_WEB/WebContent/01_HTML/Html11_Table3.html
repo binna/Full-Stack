@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Table 과제</title>
+
+<style>
+table, th, td {
+    border: 1px solid black;  /* 두께, 선종류, 선색상 */
+    border-collapse: collapse; /* border 붙이기 */
+}
+
+th, td {
+	padding: 15px;	/* 셀 안쪽의 컨텐트와 border 사이 여백 */
+}
+
+th {
+	text-align: left;
+}
+.task01{
+	border: 5px solid black;
+}
+</style>
+
+</head>
+<body>
+
+<h1>과제 테이블1</h1>
+<table style="width: 100%">
+	<tr>
+		<td rowspan="3"></td>
+		<td colspan="3"></td>
+	</tr>
+	<tr>
+		<td colspan="3"></td>
+	</tr>
+	<tr>
+		
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+	
+<h1>과제 테이블2</h1>
+<table style="width: 100%">
+	<tr>
+		<td rowspan="3"></td>
+		<td colspan="3"></td>
+	</tr>
+	<tr>
+		<td colspan="2"></td>
+		<td></td>
+	</tr>
+	<tr>
+		
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+	
+<h1>과제 테이블3</h1>
+<table style="width: 100%">
+	<tr>
+		<td></td>
+		<td colspan="2" rowspan="2"></td>
+		<td rowspan="3"></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+	</table>
+	
+<h1>과제 테이블4</h1>
+<table class="task01">
+	<tr class="task01">
+		<td class="task01" colspan="2" rowspan="2" style="background-color: Tomato;"><br><br><br>&nbsp;&nbsp;</td>
+		<td class="task01" colspan="2" style="background-color: LemonChiffon"><br><br></td>
+		
+	</tr>
+	<tr class="task01">
+		<td class="task01"><br><br></td>
+		<td class="task01"></td>
+	</tr>
+	
+	
+	
+	<tr class="task01">
+		<td class="task01" rowspan="2" style="background-color: Black">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td class="task01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td class="task01" colspan="2"></td>
+	</tr>
+	<tr class="task01">
+		<td class="task01">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+		<td class="task01" colspan="2" style="background-color: Navy"></td>
+	</tr>
+	
+	</table>
+
+</body>
+</html>

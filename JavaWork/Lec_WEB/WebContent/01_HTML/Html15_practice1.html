@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>주문 폼 작성</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+<style>
+
+body {
+	font-family: Verdana, sans-serif;
+}
+
+header {
+	font-size: 25px;
+	background-color: Tomato;
+	padding: 10px;
+	color: white;
+	font-family: Verdana, sans-serif;
+}
+
+table {
+	border: 1px solid black;
+	width: 100%;
+	margin-left: auto; 
+	margin-right: auto;
+}
+
+
+table, tr, td{
+	border-collapse: collapse;
+	padding: 20px;
+}
+
+footer {
+	font-family: Verdana, sans-serif;
+	font-size: 20px;
+
+}
+
+</style>
+
+</head>
+<body>
+
+<br>
+<header> 
+<h1>11번가. 주문/결제</h1>
+</header>
+
+<section>
+	<form>
+	<br><br> 
+	<h4>주문자 정보 입력</h4>
+	<table>
+		<tr>
+			<td>주문자 정보</td>
+			<td>
+				<input value="비회원으로 상품구매 시 반드시 본인인증을 하셔야 합니다." size="55" disabled style="border: none; width=100%; background-color: white"/>
+				<button type="button">휴대폰인증</button>
+				<button type="button">아이핀인증</button>
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">주소</td>
+			<td>
+				<input type="text" disabled>&nbsp;<button type="button">주소찾기</button><br>
+				<input type="text" size="150" disabled style="width=100%;"><br>
+				<input type="text" size="150" style="width=100%;">
+			</td>
+		</tr>
+		<tr>
+			<td>휴대전화</td>
+			<td>
+				<select name="phoneNum">
+					<option value="010" selected>010</option>
+					<option value="011">011</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+					<option value="018">018</option>
+					<option value="019">019</option>
+				</select>&nbsp;-&nbsp;
+				<input type="number" maxlength="4" size="4" style="width=100%;">&nbsp;-&nbsp;
+				<input type="number" maxlength="4" size="4" style="width=100%;">&nbsp;
+				<input type="checkbox" checked>SMS 수신동의
+			</td>
+		</tr>
+		<tr>
+			<td>이메일</td>
+			<td>
+				<input type="text">&nbsp;@&nbsp;
+				<input type="text">&nbsp;
+				<select>
+					<option selected>직접입력</option>
+					<option>naver.com</option>
+					<option>gmail.com</option>
+					<option>hanmail.net</option>
+					<option>nate.com</option>
+					<option>yahoo.com</option>
+					<option>lycos.co.kr</option>
+					<option>dreamwiz.com</option>
+					<option>netian.com</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+	<input value="※ SK플래닛(주)는 통신판매중개자로서 통신판매의 당사자가 아니며, 개별판매자가 등록한 상품정보 및 거래에 대해 SK플래닛(주)는 일체의 책임을 지지 않습니다." size="200" disabled style="border: none; width=100%; background-color: white">
+	
+	<br><br>
+	<h4>배송지 정보 입력</h4>
+	<table>
+		<tr style="border-bottom: 1px Dotted black;">
+			<td>배송지선택</td>
+			<td><button type="button">주문자 정보와 동일</button></td>
+		</tr>
+		<tr>
+			<td>받으시는 분</td>
+			<td><input type="text"></td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">주소</td>
+			<td>
+				<input type="text" disabled>&nbsp;<button type="button">주소찾기</button><br>
+				<input type="text" disabled size="150" style="width=100%"><br>
+				<input type="text" size="150" style="width=100%">
+			</td>
+		</tr>
+		<tr>
+			<td>휴대전화</td>
+			<td>
+				<select name="phoneNum">
+					<option value="010">010</option>
+					<option value="011">011</option>
+					<option value="016">016</option>
+					<option value="017">017</option>
+					<option value="018">018</option>
+					<option value="019">019</option>
+				</select>&nbsp;-&nbsp;
+				<input type="number" maxlength="4" size="4" style="width=100%;">&nbsp;-&nbsp;
+				<input type="number" maxlength="4" size="4" style="width=100%;">&nbsp;
+				<input type="checkbox" checked>안심번호 사용(무료)&nbsp;<i class="fas fa-question"></i>
+				<input type="checkbox">집전화 추가 입력
+			</td>
+		</tr>
+		<tr>
+			<td style="vertical-align: top">배송시요구사항</td>
+			<td>
+				<input type="number">&nbsp;(0자/50자)<br>
+				<input value="* 특정한 배송일을 지정하고자 할 경우 판매자와 연락하여 배송일을 확인해주시기 바랍니다." size="100" disabled style="border: none; width=100%; color: blue; background-color: white">
+				
+			</td>
+		</tr>
+	</table>
+	
+	<br><br>
+	<h4>결제 정보 입력</h4>
+	<table>
+		<tr>
+			<td>신용카드</td>
+			<td>
+				<input type="radio" name="creditCard" checked/>신용카드(일반)
+				<input type="radio" name="creditCard"/>신용카드(법인)
+				<input type="radio" name="creditCard"/>해외발급카드
+			</td>
+		</tr>
+		<tr style="border-bottom: 1px Dotted black;">
+			<td>현금결제</td>
+			<td>
+				<input type="radio" name="cash"/>무통장입금
+				<input type="radio" name="cash"/>실시간계좌이체
+			</td>
+		</tr>
+		<tr>
+			<td>카드선택</td>
+			<td>
+				<select name="cardChoice">
+					<option selected>국민</option>
+					<option>비씨</option>
+					<option>신한</option>
+					<option>현대</option>
+					<option>삼성</option>
+					<option>롯데</option>
+					<option>외환</option>
+					<option>NH</option>
+					<option>하나</option>
+					<option>우리</option>
+					<option>광주</option>
+					<option>수협</option>
+					<option>시티</option>
+					<option>전북</option>
+					<option>제주</option>
+					<option>카카오뱅크</option>
+					<option>케이뱅크</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>할부방식</td>
+			<td>
+				<select>
+					<option selected>일시불</option>
+					<option>2</option>
+					<option>5</option>
+					<option>9</option>
+					<option>12</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>결제안내</td>
+			<td>
+				<button type="button" style="color: red; border-color: red">간편결제안내</button>
+				<button type="button">공인인증안내</button>
+				<button type="button">안전결제안내</button>
+				<button type="button">안심클릭안내</button>
+				<button type="button">해외발급카드안내</button>
+			</td>
+		</tr>
+	</table>
+	
+	<div align="center" style="margin: 100px">
+	<button style="width: 200px; height: 100px; font-size: 30px">결제하기</button>
+	</div>
+	
+	</form>
+</section> 
+
+<footer> <p align="center">Copyright &copy; 2018 11Street Co.,Ltd. All Rights Reserved.</p> 
+</footer>
+
+
+</body>
+</html>

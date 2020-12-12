@@ -1,0 +1,65 @@
+package com.lec.java.access01;
+
+import com.lec.java.access02.Test02;
+/*
+ * 접근권한 수식어(Access Modifier)  접근제한자
+ * 1) 종류: private, (default), protected, public
+ * 2) 기능
+ * 	- 멤버 변수, 멤버메소드에 대한 접근 권한을 제한
+ * 3) private: '자기자신'이 선언된 클래스에서만 사용 가능
+ * 4) (default): '자기자신' + '같은 패키지'에 있는 클래스들에서는사용 가능
+ * 5) protected: '자기자신' + '같은 패키지' + '상속받은 클래스' 에서 사용 가능
+ * 		다른 패키지의 클래스라도 '상속 받으면' 사용 가능하다
+ * 6) public: 어디서든 사용이 가능
+ * 
+ * 사용범위: private < (default) < protected < public
+ * 
+ * ※ 클래스에 붙는 접근제한자는 딱 두가지 입니다
+ * (default) , public
+ */
+public class Access01Main {
+
+	public static void main(String[] args) {
+		System.out.println("접근권한 수식어(Access Modifier)");
+		
+		Test01 t1 = new Test01();
+		//t1.privatenum = 10;	// 오류 : not visible
+		t1.defaultNum = 20;
+		t1.protectedNum = 30;
+		t1.publicNum = 40;
+		
+		//t1.privateMethod();	// 오류 : not visible
+		t1.defaultMethod();
+		t1.protectedMethod();
+		t1.protectedMethod();
+		
+		// Ctrl + Shift + O : 자동으로 필요한 import와 불필요한 import는 없애거나 생성해준다
+		Test02 t2 = new Test02(); 	// 다른 패키지에 있는 클래스는 반드시 import 필요
+		
+		//t2.privateNum = 10;	// 오류 
+							// privateNum cannot be resolved or is not a field
+		//t2.defaultNum = 20;	// 오류 : not visible 
+		//t2.protectedNum = 40;	// 오류 : not visible
+		t2.publicNum = 50;
+		
+		//t2.privateMethod();	// 오류
+							// The method privateMethod() from the type Test02 is not visible
+		//t2.defaultMethod();	// 오류 : not visible 
+		//t2.protectedMethod();	// 오류 : not visible 
+		t2.publicMethod();
+		
+		
+		
+	} // end main()
+
+} // end class Access01Main
+
+
+
+
+
+
+
+
+
+

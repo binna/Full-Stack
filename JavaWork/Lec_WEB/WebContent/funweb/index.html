@@ -1,0 +1,185 @@
+<!-- [1] 디렉토리 구성 
+
+웹페이지를 담을 디렉토리 구성
+기본적으로는 메인메뉴에 맞는 디렉토리로 구성
+디렉토리 이름에는 공백,특수문자 배제!
+ /funWeb/		-- 루트 디렉토리
+ /images/		-- 메인이미지 디렉토리(이미지 관련하여 강사님이 제공)
+ /company/		-- 회사소개 페이지 디렉토리
+ /solutions/	-- 솔루션안내 페이지 디렉토리
+ /center/		-- 고객센터 페이지 디렉토리
+ /contact/		-- 연락방법 페이지 디렉토리
+ /CSS/			-- CSS 파일 디렉토리
+ /script/		-- 자바 스크립트, 관련 내용 디렉토리
+
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>FunWeb</title>
+
+<!-- [5] CSS 파일 생성, body 지정 -->
+<link href="css/default.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+	<!-- [6] CSS 이용, 웹페이지 중앙배치 #wrap -->
+	<div id="wrap">
+
+		<!-- [2] html5 스타일로 구조 잡기 -->
+		<header>
+			<!-- 헤더 들어가는 곳 -->
+				
+			<!-- [11] login | join 추가 -->
+			<div id="login">
+				<a href="#">login</a> | <a href="#">Join</a>
+			</div>
+			
+			
+			<!-- 위 아래 Float의 간섭을 방지하기 <div>를 삽입..!! -->			
+			<div class="clear"> </div>
+			
+			<!-- [3] header구성-로고 삽입 -->
+			<div id="logo">			
+				<img src="images/logo.gif" width="265" height="62" alt="FunWeb">
+			</div>
+			
+			<!-- [10] <nav><ul><li><a> 스타일 지정 -->
+			<nav id="top_menu">
+				<!-- 네비게이션 들어가는 곳 -->
+				<!-- [9] 리스트 메뉴 구조 만들기  -->
+				<ul>
+					<!-- "#" 더미 링크 : 현재 페이지로 감, 개발단계에서 페이지 만들기 전에 더미 링크로 작업 -->
+					<li><a href="#">HOME</a></li>
+					<li><a href="#">COMPANY</a></li>
+					<li><a href="#">SOLUTIONS</a></li>
+					<li><a href="#">CUSTOMER CENTER</a></li>
+					<li><a href="#">CONTACT US</a></li>
+					
+				</ul>
+			
+			</nav>
+			
+		</header>
+		
+		<!-- [12-1] 위 아래 Float의 간섭을 방지하기 위해 <div> 삽입 -->
+		<div class="clear"></div>
+		
+		<!-- [4] 메인이미지 들어갈 div 만들기 -->
+		<div id="main_img">
+			<!-- [12-2] 메인이미지에 사용할 이미지 올리기 -->
+			<img src="images/main_img.jpg" width="971" height="282">
+		</div>
+		
+		
+		<!-- [13-1] 본문(article) 작성 -->
+		<article id="front">
+			<!-- 메인 콘텐츠 들어가는 곳 -->
+			<div id="solution">
+
+				<div id="hosting">
+					<h3>Web Hosting Solution</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc urna, 
+					fringilla non fringilla ut, lacinia eu urna. Aliquam nec urna at nisi pulvinar eleifend. 
+					Duis commodo luctus leo vitae feugiat. Curabitur ac sodales ante. Ut vel est
+					</p>
+				</div>
+				<div id="security">
+					<h3>Web Security Solution</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc urna, 
+					fringilla non fringilla ut, lacinia eu urna. Aliquam nec urna at nisi pulvinar eleifend. 
+					Duis commodo luctus leo vitae feugiat. Curabitur ac sodales ante. Ut vel est
+					</p>
+				</div>
+				<div id="payment">
+					<h3>Web Payment Solution</h3>
+					<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc urna, 
+					fringilla non fringilla ut, lacinia eu urna. Aliquam nec urna at nisi pulvinar eleifend. 
+					Duis commodo luctus leo vitae feugiat. Curabitur ac sodales ante. Ut vel est
+					</p>
+				</div>
+				
+			</div>
+			
+			
+			<!-- [16-1] 위 아래 Float의 간섭을 방지하기 위해 <div> 삽입 -->
+			<div class="clear"></div>
+		
+			<!-- [16-2] 하단 News 레이아웃 잡기 -->
+			<div id="sec_news">
+				<!-- [17-1] Security, News 디자인-class명 설정 -->
+				<h3><span class="orange">Security</span> News</h3>
+				<dl>
+					<dt><a href="#">Vivamus id ligula velit, quis euismod nisi</a></dt>
+					<dd><a href="#">Proin quis ante eget arcu tempus tempus porta vel ipsum. 
+						Quisque vitae nulla vel lorem cursus dignissim. Sed sit amet metus tortor. 
+						In hac habitasse platea dictumst. Aliquam erat volutpat. Aliquam massa risus, </a></dd>
+					<dt><a href="#">Vivamus id ligula velit, quis euismod nisi</a></dt>
+					<dd><a href="#">Proin quis ante eget arcu tempus tempus porta vel ipsum. 
+						Quisque vitae nulla vel lorem cursus dignissim. Sed sit amet metus tortor. 
+						In hac habitasse platea dictumst. Aliquam erat volutpat. Aliquam massa risus, </a></dd>
+				</dl>
+			</div>
+			
+			<div id="news_notice">
+				<!-- [17-1] Security, News 디자인-class명 설정 -->
+				<h3 class="brown">News &amp; Notice</h3>
+				<table>
+				  <tr>
+				  	<!-- [19-1] News & Notice <table>-class명 설정 -->
+					<td class="contxt"><a href="#">Vivamus id ligula velit, quis euismod nisi </a></td>
+					<td><a href="#">2011.07.31</a></th>
+				  </tr>
+				  <tr>
+				  	<!-- [19-1] News & Notice <table>-class명 설정 -->
+					<td class="contxt">Fusce eros augue, tempus nec interdum eu</td>
+					<td>2011.06.11</td>
+				  </tr>
+				  <tr>
+				  	<!-- [19-1] News & Notice <table>-class명 설정 -->
+					<td class="contxt">Donec eget tincidunt purus</td>
+					<td>2011.05.12</td>
+				  </tr>
+				  <tr>
+				  	<!-- [19-1] News & Notice <table>-class명 설정 -->
+					<td class="contxt">Nam facilisis mauris in dui suscipit volutpat </td>
+					<td>2011.05.08</td>
+				  </tr>
+				  <tr>
+				  	<!-- [19-1] News & Notice <table>-class명 설정 -->
+					<td class="contxt">Aenean in dui mollis leo ullamcorper fringilla </td>
+					<td>2011.04.25</td>
+				  </tr>
+				</table>  
+			</div>
+		</article>
+		
+		
+		<!-- [20-1] 위 아래 Float의 간섭을 방지하기 위해 <div> 삽입 -->
+		<div class="clear"></div>
+		
+		<!-- [20-2] Footer  <footer> -->
+		<footer>
+			<!-- 푸터 들어가는 곳 -->
+			<hr>
+			<div id="copy">
+				All contents Copyright 2011 FunWeb Inc. all rights reserved<br>
+				Contact mail : funweb@funwebbiz.com Tel: +82 64 123 4315 Fax +82 64 123 4321
+			</div>
+			
+			<div id="social">
+				<img src="images/facebook.gif" width="33" height="33" alt="Facebook">
+				<img src="images/twitter.gif" width="33" height="34" alt="Twitter">
+			</div>
+		</footer>
+	
+	</div>
+
+</body>
+</html>

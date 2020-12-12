@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>캘린더 폼 작성</title>
+
+<style>
+table#radioChoice, table#trCalendar, tr.trRadioChoice, tr.trCalendar, td.tdCalendar, td.tdRadioChoice, th {
+	border: 1px solid black;
+	border-collapse: collapse;
+	padding: 20px; 
+}
+
+ul, li {
+	list-style-type: none;
+	display: inline;
+}
+
+li {
+	margin: 0px;
+	border: 1px solid black;
+	padding: 10px;
+	width: 100;
+}
+
+a {
+	padding: 10px;
+	text-decoration: none; 
+	color: black;
+}
+
+a:hover { 
+	background-color: DodgerBlue;
+	color: white;
+}
+
+iframe {
+	width: 100%;
+	border: none;
+}
+
+footer {
+	text-align: center;
+	background-color: #EEEEEE;
+}
+
+main {
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<nav>
+	<table style="border: 2px solid DarkGray; width: 100%; background-color: #EEEEEE;">
+		<tr>
+			<td style="text-align: center; padding: 10px; ">정책차림표</td>
+			<td style="text-align: center; padding: 10px; ">미리보는 지원사업</td>
+			<td style="text-align: center; padding: 10px; ">마감임박 지원사업</td>
+			<td style="text-align: center; padding: 10px; background-color: DodgerBlue; color: white;">접수중인 지원사업</td>
+		</tr>
+	</table>
+</nav>
+
+<article> 
+	<div style="text-align: center; margin: 20px;">
+	<h1 style="display: inline; color: DimGray;">&lt;&nbsp;</h1>
+	<h1 style="display: inline; color: DodgerBlue;">2015-06-17</h1>
+	<h1 style="display: inline;color: DimGray;">&nbsp;&gt;</h1>
+	</div>
+	
+	<table id="radioChoice" style="width: 100%">
+		<tr class="trRadioChoice">
+			<td class="tdRadioChoice" colspan="7">
+				<input type="radio" name="choice" checked/>전체&nbsp;&nbsp;
+				<input type="radio" name="choice"/>창업·벤처&nbsp;&nbsp;
+				<input type="radio" name="choice"/>소상공인&nbsp;&nbsp;
+				<input type="radio" name="choice"/>판로·수출&nbsp;&nbsp;
+				<input type="radio" name="choice"/>R&D&nbsp;&nbsp;
+				<input type="radio" name="choice"/>금융·세제&nbsp;&nbsp;
+				<input type="radio" name="choice"/>인력
+			</td>
+		</tr>
+		<tr class="trCalendar">
+			<td class="tdCalendar" style="padding: 2px">
+				<table id="calendar" style="width: 100%">
+					<tr class="trCalendar">
+						<th>일</th>
+						<th>월</th>
+						<th>화</th>
+						<th>수</th>
+						<th>목</th>
+						<th>금</th>
+						<th>토</th>
+					</tr>
+		
+					<tr class="trCalendar">
+						<td class="tdCalendar" style="background-color: #EEEEEE;"></td>
+						<td class="tdCalendar">1</td>
+						<td class="tdCalendar">2</td>
+						<td class="tdCalendar">3</td>
+						<td class="tdCalendar">4</td>
+						<td class="tdCalendar">5</td>
+						<td class="tdCalendar">6</td>
+					</tr>
+		
+		
+					<tr class="trCalendar">
+						<td class="tdCalendar" style="background-color: Cyan;">7</td>
+						<td class="tdCalendar">8</td>
+						<td class="tdCalendar">9</td>
+						<td class="tdCalendar">10</td>
+						<td class="tdCalendar">11</td>
+						<td class="tdCalendar">12</td>
+						<td class="tdCalendar">13</td>
+					</tr>
+		
+					<tr class="trCalendar">
+						<td class="tdCalendar">14</td>
+						<td class="tdCalendar">15</td>
+						<td class="tdCalendar">16</td>
+						<td class="tdCalendar">17</td>
+						<td class="tdCalendar">18</td>
+						<td class="tdCalendar">19</td>
+						<td class="tdCalendar">20</td>
+					</tr>
+		
+					<tr class="trCalendar">
+						<td class="tdCalendar">21</td>
+						<td class="tdCalendar">22</td>
+						<td class="tdCalendar">23</td>
+						<td class="tdCalendar">24</td>
+						<td class="tdCalendar">25</td>
+						<td class="tdCalendar">26</td>
+						<td class="tdCalendar">27</td>
+					</tr>
+		
+					<tr class="trCalendar">
+						<td class="tdCalendar">28</td>
+						<td class="tdCalendar">29</td>
+						<td class="tdCalendar">30</td>
+						<td class="tdCalendar" style="background-color: #EEEEEE;"></td>
+						<td class="tdCalendar" style="background-color: #EEEEEE;"></td>
+						<td class="tdCalendar" style="background-color: #EEEEEE;"></td>
+						<td class="tdCalendar" style="background-color: #EEEEEE;"></td>
+					</tr>
+		
+				</table>
+			</td>
+		</tr>
+	
+	</table>
+</article> 
+
+
+
+
+<main>
+	<h4 style="color: #555555; text-align: left;">· 2015년 6월 7일, 전체 검색 결과, 진행중인 사업은 총 614건 입니다.</h4>
+	<iframe src="Html15_practice3.html" name="businessList"></iframe>
+
+	<br><br>
+	<button>&lt;&lt;</button>&nbsp;<button>&lt;</button>
+	<a href="Html15_practice3.html" target="businessList">&nbsp;1&nbsp;</a> 
+	<a href="Html15_practice3.html" target="businessList">&nbsp;2&nbsp;</a>
+	<a href="Html15_practice3.html" target="businessList">&nbsp;3&nbsp;</a>
+	<a href="Html15_practice3.html" target="businessList">&nbsp;4&nbsp;</a>
+	<a href="Html15_practice3.html" target="businessList">&nbsp;5&nbsp;</a>
+	<button>&gt;</button>&nbsp;<button>&gt;&gt;</button>
+	<br><br><br>
+</main>
+
+
+
+<footer>
+	<br>
+	<select style="vertical-align: middle;">
+		<option>키워드</option>
+		<option>작성일자</option>
+		<option>작성자</option>
+	</select>
+	<input type="text" size="50">&nbsp;<button>검색</button>
+	<br><br>
+</footer>
+
+</body>
+</html>

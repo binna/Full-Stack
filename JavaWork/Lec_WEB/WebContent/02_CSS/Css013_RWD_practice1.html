@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+/* 1. 기본스타일 mobile */
+* {
+	box-sizing: border-box;
+}
+[class*="col-"]{
+    float: left;
+    width: 100%;
+    height: 100px;
+    border: 5px solid white;
+}
+.A {display: none;}
+.E, .F, .G {width: 33.33%;}
+.D {height: 200px;}
+
+/* 2. 600px 이상 : tablet */
+@media screen and (min-width: 700px) {
+    /* Tablet*/
+    .A {display: block;}
+    .C {height: 200px;}
+    .col-m-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+    .col-m-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+
+/* 3. 768px 이상 : PC */
+@media screen and (min-width: 768px) {
+	.C {height: 300px;}
+	.D {height: 300px;}
+    .col-1 {width: 8.33%; }  /* 1칸 짜리 폭 */
+    .col-2 {width: 16.66%; }  /* 2칸 짜리 폭 */
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+</style>
+
+<body>
+
+<div id="header">
+    <div class="A col-4 col-m-2" style="background-color: gray;"></div>
+    <div class="B col-8 col-m-10" style="background-color: purple;"></div>
+</div>
+
+    <div class="clear"></div>
+
+    <div class="C col-2 col-m-2" style="background-color: cyan;"></div>
+    <div class="D col-6 col-m-8" style="background-color: HoneyDew;"></div>
+    
+    <div class="clear"></div>
+    
+    <div class="E col-4 col-m-2" style="background-color: Wheat"></div>
+    <div class="F col-4 col-m-2" style="background-color: Teal"></div>
+    <div class="G col-4 col-m-3" style="background-color: SandyBrown"></div>
+
+    <div class="clear"></div>
+
+    <div class="H col-12 col-m-9" style="background-color: LemonChiffon"></div>
+    
+</body>
+</html>

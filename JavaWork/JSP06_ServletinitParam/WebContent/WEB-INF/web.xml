@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>JSP06_ServletinitParam</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+
+	<!-- web.xml에 초기화 파라미터 기술하는 방법
+		 1) Servlet 클래스 작성
+		 2) web.xml에 초기화 파라미터를 입력
+		 3) ServletConfig 의 메소드를 이용해서 데이터를 사용(접근)
+		    ServletConfig의 getInitParameter()메소드를 이용해서 접근할 수 있다.
+	-->
+	<!--
+	<servlet>
+		<servlet-name>ServletInit</servlet-name>
+		<servlet-class>com.lec.servlet.InitServlet</servlet-class>
+	 	
+		<init-param>
+	 		<param-name>id</param-name>
+	 		<param-value>test</param-value>
+	 	</init-param>
+	 	
+	 	<init-param>
+	 		<param-name>pw</param-name>
+	 		<param-value>1234</param-value>
+	 	</init-param>
+	 	
+	 	<init-param>
+	 		<param-name>local</param-name>
+	 		<param-value>seoul</param-value>
+	 	</init-param>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>ServletInit</servlet-name>
+		<url-pattern>/SI</url-pattern>
+	</servlet-mapping>
+	-->
+
+</web-app>

@@ -1,0 +1,307 @@
+@charset "UTF-8";
+/* [5] CSS 파일 생성, body 지정 */
+body {
+	background-color: #898989;
+	margin: 0;
+	padding: 0;
+	font-size: 0.75em;
+	line-height: 1.2em;
+	color: #333;
+}
+
+
+/* [6] 웹페이지 중앙배치 #wrap */
+#wrap {
+	width: 971px;
+	text-align: left;
+	margin: 0px;
+	margin-right: auto;
+	margin-left: auto;
+	
+	
+	/* [8] 그림자 백그라운드 적용 */
+	background-image: url(../images/shadow.png);
+	background-repeat: repeat-y;
+	min-height: 780px;
+}
+
+
+/* [7] 로고 스타일, header 스타일 */
+#logo {
+	float: left;
+	width: 250px;
+	
+	/* 위부터 시작하여 시계 방향으로 돌아감 */
+	margin: 40px 0 0 40px;
+}
+header {
+	height: 151px;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* [10] <nav><ul><li><a> 스타일 지정 */
+nav#top_menu {
+	width: 600px;
+	float: right;
+	margin: 50px 20px 0 0;
+}
+nav#top_menu ul {
+	list-style: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: 100;
+	color: #333;
+}
+nav#top_menu ul li {
+	float: left;
+	/* 첫번째 숫자 : 위아래 여백, 두번째 숫자 : 좌우 여백 */
+	margin: 0 5px;
+}
+nav#top_menu a {
+	text-decoration: none;
+	color: #333;
+	
+	/* a 태그 display 기본 설정은 inline
+	      넓이 지정하고 싶으면 display 설정을 block으로 변경 후 
+	   width, height 설정 가능 */
+	display: block;
+	height: 20px;
+	padding: 10px;
+}
+nav#top_menu a:hover {
+	background-image: url(../images/blue.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+}
+
+
+/* [11] login | join 추가 */
+#login {
+	float: right;
+	margin: 20px 64px 0 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	
+	/* 자간 간격, 글자간 간격*/
+	word-spacing: 5px;
+}
+#login a {
+	text-decoration: none;
+	color: #333;	
+}
+#login a:hover {
+	color: #F90;
+}
+.clear {
+	/* 양쪽으로 float 허용 안하기 위해 both로 설정 */
+	clear: both;
+}
+
+
+/* [12-3] 메인이미지 원하는 모양으로 꾸며서 만들기 */
+#main_img {
+	width: 971px;
+	height: 308px;
+	background-image: url(../images/img_back.png);
+	
+	/* background-repeat : 백그라운드 이미지 반복 여부를 설정 */
+	background-repeat: no-repeat;
+	
+	background-position: center top;
+} 
+#main_img img {
+	margin: 9px 0 0 0;
+}
+
+
+/* [13-2] 본문(article) CSS 작성 */
+article#front {
+	margin: 5px 0 5px 0;
+}
+#solution {
+	border: 1px solid #ffffff;
+	width: 910px;
+	min-height: 150px;
+	background-color: #EDEDED;
+	padding: 10px;
+	
+	/* border-radius : 테두리를 둥글게 만드는 속성 */
+	border-radius: 10px;
+	
+	margin: 0 0 0 20px;
+}
+#hosting, #security, #payment {
+	width: 30%;
+	float: left;
+	padding: 10px;
+}
+
+
+/* [14] #solution 내 <h3>,<p> 스타일 */
+@font-face {
+	/* @font-face : 기본글꼴 외의 다른 글꼴을 지정할 경우
+	     http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp */
+	font-family: "seo";
+	src:url(../images/segoeui.eot);
+}
+#hosting h3, #security h3, #payment h3 {
+	font-family: seo;
+	font-size: 14px;
+	font-weight: 600;
+	color: #333;
+	margin: 0 0 10px 80px;
+}
+#hosting p, #security p, #payment p {
+	font-family: seo;
+	font-size: 12px;
+	color: #333;
+	margin: 0 0 0 80px;
+}
+
+
+/* [15] 각 solution 에 아이콘 배치 */
+#hosting {
+	background-image: url(../images/icon1.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	border-left: 1px solid #ccc;
+}
+#security {
+	background-image: url(../images/icon2.png);
+	
+	/* background-repeat : 백그라운드 이미지 반복 여부를 설정 */
+	background-repeat: no-repeat;
+	
+	background-position: left 15px;
+	border-left: 1px solid #ccc;
+}
+#payment {
+	background-image: url(../images/icon3.png);
+	background-repeat: no-repeat;
+	background-position: left 15px;
+	border-left: 1px solid #ccc;
+}
+
+
+/* [16-3] 하단 News 레이아웃 잡기 */
+#sec_news, #news_notice {
+	float: left;
+	width: 420px;
+	margin: 15px 0 0 20px;
+}
+
+
+/* [17-2] Security, News 디자인 */
+#sec_news h3, #news_notice h3 {
+	font-family: seo;
+	font-size: 14px;
+	font-style: italic;
+	font-weight: normal; 
+	width: 420px;
+	height: 24px;
+	background-image: url(../images/h3_back.jpg);
+	background-repeat: no-repeat;
+	padding: 5px 0 0 22px;
+}
+#sec_news .orange {
+	color: #F26522;
+}
+#news_notice .brown {
+	color: #827B00;
+}
+
+
+/* [18] Security News <dl> */
+#sec_news dt {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 16px;
+	
+	/* 첫번째 숫자 : 위아래 여백, 두번째 숫자 : 좌우 여백 */
+	margin: 5px 0;
+	
+	color: F00;
+}
+#sec_news dt a {
+	color: #F00;
+	text-decoration: none;
+}
+#sec_news dt a:hover {
+	color: #F90;
+	
+	/* underline : 글자 아래에 선 만들기 */
+	text-decoration: underline;
+}
+#sec_news dd {
+	margin-left: 0;
+	color: #333;
+}
+#sec_news dd a {
+	color: #333;
+	text-decoration: none;
+}
+#sec_news dd a:hover {
+	color: #F90;
+	text-decoration: underline;
+}
+
+
+/* [19-2] News & Notice <table> */
+#news_notice {
+	padding-left: 30px;
+}
+#news_notice table {
+	width: 400px;
+	border-collapse: collapse;
+	text-align: center;
+}
+#news_notice td {
+	padding: 6px 4px;
+	border-bottom: 1px dotted #999;
+	
+}
+#news_notice td.contxt {
+	background-image: url(../images/tr_back.gif);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 15px;
+	text-align: left;
+	color: #333;
+}
+#news_notice a {
+	color: #333;
+	text-decoration: none;
+}
+#news_notice a:hover {
+	text-decoration: none;
+	color: #F90;
+}
+
+
+/* [21] Footer 스타일 입히기 */
+footer {
+	margin: 50px 0 0 0;
+	height: 80px;
+	background-image: url(../images/under_logo.gif);
+	background-repeat: no-repeat;
+	background-position: 40px center;
+}
+footer hr {
+	width: 900px;
+	margin: 0 0 0 15px;
+}
+footer #copy {
+	font-family: seo;
+	width: 450px;
+	margin: 20px 0 0 190px;
+	float: left;
+}
+footer #social {
+	width: 130px;
+	margin: 20px 20px 0 0;
+	float: right;
+}
+footer #social img {
+	margin: 1px;
+}

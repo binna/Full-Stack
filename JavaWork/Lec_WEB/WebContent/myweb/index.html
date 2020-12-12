@@ -1,0 +1,290 @@
+<!-- 책 추천 홈페이지 만들기, 홈페이지 이름 : 북프랜드 BookFriend -->
+<!-- 
+ /myWeb/			-- 루트
+ /history/			-- 회사소개
+ /bestSeller/		-- 베스트셀러
+ /bookSelect/		-- 원하는 책을 검색하여 책 소개 및 구매할 수 있는 페이지로 이동
+ /usedMarketPlace/	-- 중고장터
+  
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BookFriendWeb</title>
+	
+	<!-- Font Awesome Icons -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS 적용 -->
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+	<link href="css/RWD.css" rel="stylesheet" type="text/css">
+
+
+	<!-- 자바 스크립트 적용 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="JS/main.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	
+	<div id="wrap">
+
+		<!-- header -->
+		<header>
+		
+			<div id="login_join">
+				<button id="login" onclick="document.getElementById('id01').style.display='block'" 
+					style="width:auto;">Login</button> | <button id="join" onclick="document.getElementById('id02')
+						.style.display='block'" style="width:auto;">Join</button>
+			</div>
+
+			<div class="clear"> 
+	
+			<!-- 로고 삽입 -->		
+			<div id="logo">	
+				<img alt="BookFriend" src="images/logo.jpg" width="265" height="62">		
+			</div>
+
+			<!-- 소제목 -->
+			<nav id="top_menu">
+				<div class="topnav">
+					<ul>
+						<li><a href="index.html" class="target">HOME</a></li>
+						
+						<div id="top_menus" onclick="prepar()">
+							<li><a href="#">History</a></li>
+							<li><a href="#">Best Seller</a></li>
+							<li><a href="#">Book Select</a></li>
+							<li><a href="#">Used Market Place</a></li>
+						</div>
+					</ul>
+					
+					<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+						<i class="fa fa-bars"></i>
+					</a>
+				</div>
+			</nav>
+		
+		</header>
+
+		<!-- 로그인 레이아웃 -->
+		<div id="id01" class="modal">
+			<form class="modal-content1 animate" action="index.html">
+				
+				<div class="imgcontainer">
+					<span onclick="document.getElementById('id01').style.display='none'" 
+						class="close" title="Close Modal">&times;</span>
+
+						<br><br><br><br>
+						<img src="images/login.jpg" style="margin: auto;">
+						<br><br><br><br>
+
+				</div>
+
+				<div class="container">
+					<input type="text" placeholder="아이디" name="uname" required>
+					<br>
+					<input type="password" placeholder="비밀번호" name="psw" required>
+					<br><br>
+
+					<button id="loginbtn" type=submit>Login</button>
+
+					<label>
+						<input type="checkbox" checked="checked" name="remember"> 아이디 기억하기
+					</label>
+					<br><br><br><br>
+				</div>
+		
+				<div class="container" style="background-color:#f1f1f1">
+					<button type="button" onclick="document.getElementById('id01').style.display='none'" 
+						class="cancelbtn">취소</button>
+					<span class="psw">비밀번호를 잃어버리셨나요? <a href="#">비밀번호 찾기</a></span>
+					<br>
+				</div>
+			</form>
+		</div>
+
+		
+		<!-- 회원가입 레이아웃 -->
+		<div id="id02" class="modal">
+			<span onclick="document.getElementById('id02').style.display='none'" 
+				class="clo" title="Close Modal">&times;</span>
+			
+			<form class="modal-content2">
+
+				<div class="container2" action="index.html">
+					<h1>회원가입</h1>
+					<p>아래의 필수사항을 누락하지 말고 모두 입력해주세요</p>
+					<hr>
+					<label for="id"><b>아이디(필수)</b></label>
+					<input type="text" name="id" required>
+
+					<label for="psw"><b>비밀번호(필수)</b></label>
+					<input type="password" class='pws1' name="psw" required>
+			
+					<label for="psw-repeat"><b>비밀번호 재확인(필수)</b></label>
+					<input type="password" class='pws2' name="psw-repeat" required>
+
+					<label for="name"><b>이름(필수)</b></label>
+					<input type="text" name="name" required>
+
+					<label for="phoneNum" style="display: block; width: 100%;"><b>휴대전화(선택)</b></label>
+					<select name="phone">
+						<option value="010" selected>010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					<input class="num" id="num1" type="text" value="-" disabled>
+					<input name = "phoneNum" type="number" maxlength="4" size="4">
+					<input id="num2" type="text" value="-"disabled>
+					<input class="num" name = "phoneNum" type="number" maxlength="4" size="4">
+					
+					<div class="cheboxfix">
+						<input type="checkbox" id="chk_all" class="chk" name="agreeAll"/> 이용약관(필수), 개인정보 수집 및 이용(필수), 광고 및 프로모션 알림 수신(선택) 모두 동의합니다.<br>
+						
+						<input type="checkbox" class="chk chkneed1" name="agree" required/> 북프랜드 이용약관 동의 (필수)
+						<button id="agree1btn" type="button"><a href="join/use_term.html" target="_blank">약관확인</a></button>
+						<br>
+
+						<input type="checkbox" class="chk chkneed2" name="agree" required/> 북프랜드 개인정보 수집 및 이용에 대한 안내 (필수)
+						<button id="agree2btn"><a href="join/personal.html" target="_blank">약관확인</a></button>
+						<br>
+
+						<input type="checkbox" class="chk" name="agree"/> 광고 및 프로모션 등 SMS 수신 동의(선택)<br>
+					</div>
+
+					<div class="clearfix">
+						<button type="button" onclick="document.getElementById('id02').style.display='none'" 
+							class="canbtn">취소</button>
+						<button type="submit" class="signupbtn">완료</button>
+					</div>
+
+				</div>
+
+			</form>
+
+		</div>
+
+		<div class="clear"></div>
+
+		<!-- 베스트 셀러 노출 -->
+		<article id="best_seller">
+			<!-- 슬라이드 쇼를 통해 노출-->
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+					<img src="images/total/total1.jpg">
+					<img src="images/total/total2.jpg">
+					<img src="images/total/total3.jpg">
+					<img src="images/total/total4.jpg">
+					<img src="images/total/total5.jpg">
+					
+					<div class="text">종합(Top5)</div>
+				</div>
+
+				<div class="mySlides fade">
+					<img src="images/navel/novel1.jpg">
+					<img src="images/navel/novel2.jpg">
+					<img src="images/navel/novel3.jpg">
+					<img src="images/navel/novel4.jpg">
+					<img src="images/navel/novel5.jpg"">
+
+					<div class="text">소설(top5)</div>
+				</div>
+				
+				<div class="mySlides fade">
+					<img src="images/self/self_improvement1.jpg">
+					<img src="images/self/self_improvement2.jpg">
+					<img src="images/self/self_improvement3.jpg">
+					<img src="images/self/self_improvement4.jpg">
+					<img src="images/self/self_improvement5.jpg">
+					
+					<div class="text">자기계발(Top5)</div>
+				</div>
+				
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				
+			</div>
+
+			<div class = "pagination" style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span> 
+				<span class="dot" onclick="currentSlide(2)"></span> 
+				<span class="dot" onclick="currentSlide(3)"></span> 
+			</div>
+		</article>
+
+
+		<div class="clear"></div>
+		
+
+		<!-- 중고장터 글 노출 -->
+		<article id="used_market">
+
+			<div class="text_market">Used Market Place</div>
+			
+			<div id="main_userd_market">
+				<table>
+					<tr>
+						<th class="no">No</th><th class="title">책제목</th><th class="price">가격</th>
+					</tr>
+					<tr>
+						<td class="no">1</td><td class="title">모든 사람에게 좋은 사람일 필요는 없어</td><td class="price">12,420원</td>
+					</tr>
+					<tr>
+						<td class="no">2</td><td class="title">생각의 탄생(양장본 HardCover)</td><td class="price">10,000원</td>
+					</tr>
+					<tr>
+						<td class="no">3</td><td class="title">지리의 힘</td><td class="price">10,900원</td>
+					</tr>
+					<tr>
+						<td class="no">4</td><td class="title">모든 것의 가격</td><td class="price">12,600원</td>
+					</tr>
+					<tr>
+						<td class="no">5</td><td class="title">제4차 산업혁명(클라우스 슈밥의)</td><td class="price">4,500원</td>
+					</tr>
+					<tr>
+						<td class="no">6</td><td class="title">유시민의 경제학 카페</td><td class="price">5,800원</td>
+					</tr>
+					<tr>
+						<td class="no">7</td><td class="title">아내를 죽였습니까</td><td class="price">8,000원</td>
+					</tr>
+					<tr>
+						<td class="no">8</td><td class="title">심연</td><td class="price">7,000원</td>
+					</tr>
+					<tr>
+						<td class="no">9</td><td class="title">하버드 상위 1퍼센트의 비밀(하드커버 리커버</td><td class="price">10,500원</td>
+					</tr>
+					<tr>
+						<td class="no">10</td><td class="title">언어의 온도(3주년 150만부 기념 에디션)</td><td class="price">4,000원</td>
+					</tr>
+				</table>
+			
+			</div>
+		</article>
+
+		<div class="clear"></div>
+		
+		<!-- footer -->
+		<footer>
+			<hr>
+			<div id="copy">
+				All contents Copyright 2020 BookFriend Inc. all rights reserved<br>
+				Contact mail : every5116@naver.com Tel: +82 010 1234 0316 Fax +82 02 1234 0316
+			</div>
+
+			<div id="social">
+				<img src="images/facebook.gif" width="33" height="33" alt="Facebook">
+				<img src="images/twitter.gif" width="33" height="34" alt="Twitter">
+			</div>
+		</footer>
+	</div>
+
+</body>
+</html>

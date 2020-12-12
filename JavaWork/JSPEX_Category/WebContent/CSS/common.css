@@ -1,0 +1,10 @@
+@charset "UTF-8";
+
+#mycate span select {
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+#mycate span select:disabled {
+	padding: 5px 50px;
+}

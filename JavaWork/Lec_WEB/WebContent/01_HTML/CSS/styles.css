@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* property:value 쌍은 세미콜론으로 마무리 지어야 한다..!! */
+
+body {
+	background-color: ghostwhite;
+}
+
+h1 {
+	color: dodgerblue;
+}
+
+p {
+	color: deeppink;
+}

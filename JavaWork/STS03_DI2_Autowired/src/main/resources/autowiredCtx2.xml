@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	
+	<!-- Namespaces 에서 context 사용하기 위해서는 아래의 코드는 반드시 선언해줘야함! -->
+	<context:annotation-config/>
+	
+	<bean id="dao" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_MEMBER"/>
+		<qualifier value="memberDAO"/>
+	</bean>
+	
+	<!-- 
+		@Qualifier 는 @Autowired 와 달리  
+		‘멤버변수’와 ‘setter’에만 적용 가능(생성자에는 적용 불가)
+	 -->
+	<bean id="dao2" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_BOARD"/>
+		<qualifier value="boardDAO"/>
+	</bean>
+	
+	<bean id="listService" class="com.lec.beans.ListService"/>
+	
+	<!-- 
+		동일 DAO 객체 여러 개인데 qualifier가 지정되어 있지 않으면
+		이름이 같은 것을 찾는다 
+	-->
+	<bean id="myDao" class="com.lec.beans.DAO">
+		<constructor-arg value="DAO_VOTE"/>
+	</bean>
+	
+	<bean id="viewService" class="com.lec.beans.ViewService"/>
+
+</beans>
