@@ -22,4 +22,10 @@
 
 <br><hr><br>
 
-# 수업 내용은 블로그에 정리, 기록했다.
+# 해당 수업 내용은 블로그에 정리했다.
+
+<br><hr><br>
+
+# 해당 수업을 들으면서 참여했던 팀프로젝트
+[1. JSP 프로젝트](https://shine94.tistory.com/131?category=853418)
+[2. 스프링 프로젝트](https://shine94.tistory.com/162?category=885514)
