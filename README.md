@@ -27,5 +27,5 @@
 <br><hr><br>
 
 # 해당 수업을 들으면서 참여했던 팀프로젝트
-[1. JSP 프로젝트](https://shine94.tistory.com/131?category=853418) <>
-[2. 스프링 프로젝트](https://shine94.tistory.com/162?category=885514)
+1. [JSP 프로젝트](https://shine94.tistory.com/131?category=853418) <br>
+2. [스프링 프로젝트](https://shine94.tistory.com/162?category=885514)
