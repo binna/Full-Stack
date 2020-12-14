@@ -23,7 +23,7 @@
 <br><hr><br>
 
 # 해당 수업 내용은 블로그에 정리했다.
-    [수업 정리 보러가기](https://shine94.tistory.com/category/%5B%EC%B7%A8%EC%84%B1%ED%8C%A8%5DJAVA%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%85%EA%B8%B0%EB%B0%98_%ED%92%80%EC%8A%A4%ED%83%9D)
+[수업 정리 보러가기](https://shine94.tistory.com/category/%5B%EC%B7%A8%EC%84%B1%ED%8C%A8%5DJAVA%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%85%EA%B8%B0%EB%B0%98_%ED%92%80%EC%8A%A4%ED%83%9D)
 
 <br><hr><br>
 
