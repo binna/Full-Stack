@@ -5,7 +5,7 @@
 #include <time.h>
 #pragma warning(disable:4996)
 
-// ÇÔ¼ö Á¤ÀÇ
+// í•¨ìˆ˜ ì •ì˜
 int addTwo(int a, int b)
 {
 	return a + b;
