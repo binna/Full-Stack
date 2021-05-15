@@ -1,4 +1,4 @@
-# 자바 프레임워크 기반 풀스택(2020.03.16 ~ 2020.08.04)
+# 자바 프레임워크 기반 풀스택(2020.03.16 ~ 2020.08.06)
 
 1. 프로그래밍 언어 활용(Java)
     > 프로그래밍 언어 활용
@@ -23,10 +23,10 @@
 <br><hr><br>
 
 # 해당 수업 내용은 블로그에 정리했다.
-[수업 내용을 정리한 블로그로 이동](https://shine94.tistory.com/category/%5B%EC%B7%A8%EC%84%B1%ED%8C%A8%5DJAVA%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%85%EA%B8%B0%EB%B0%98_%ED%92%80%EC%8A%A4%ED%83%9D)
+[수업내용 정리한 블로그로 이동하기](https://shine94.tistory.com/category/%5B%EC%B7%A8%EC%84%B1%ED%8C%A8%5DJAVA%ED%94%84%EB%A0%88%EC%9E%84%EC%9C%85%EA%B8%B0%EB%B0%98_%ED%92%80%EC%8A%A4%ED%83%9D)
 
 <br><hr><br>
 
 # 해당 수업을 들으면서 참여했던 팀프로젝트
 1. [JSP 프로젝트(05.25 ~ 06.15)](https://shine94.tistory.com/131?category=853418) <br>
-2. [스프링 프로젝트(07.15 ~ 08.06)](https://shine94.tistory.com/162?category=885514)
+2. [스프링 프로젝트(07.15 ~ 08.05)](https://shine94.tistory.com/162?category=885514)
